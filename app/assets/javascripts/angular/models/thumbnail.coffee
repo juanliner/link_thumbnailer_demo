@@ -1,6 +1,6 @@
 @thumbnailer.factory 'Thumbnail', ['$resource', ($resource) ->
 
-  service = $resource "https://link-thumbnailer-api.herokuapp.com/thumbnails/:action", { action: '@action' },
+  service = $resource "https://pink-thumbnails.herokuapp.com/thumbnails/:action", { action: '@action' },
     new: { method: 'JSONP', params: { action: 'new', callback: 'JSON_CALLBACK' } }
 
   factory =
